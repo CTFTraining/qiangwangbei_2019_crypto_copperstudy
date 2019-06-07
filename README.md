@@ -2,9 +2,6 @@
 
 # 强网杯 2019 copperstudy
 
-## Link
-
-[qiangwangbei_2019_crypto_copperstudy](https://github.com/CTFTraining/qiangwangbei_2019_crypto_copperstudy)
 
 ## 考点
 
