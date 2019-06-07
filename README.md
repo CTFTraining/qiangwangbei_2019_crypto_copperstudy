@@ -1,13 +1,4 @@
----
-title: 强网杯 2019 copperstudy
-toc: true
-date: 2019-6-07 10:51:42
-categories: Qiangwangbei
-tags:
-  - crypto
-  - rsa
-  - coppersmith
----
+
 
 # 强网杯 2019 copperstudy
 
