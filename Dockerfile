@@ -1,10 +1,15 @@
-FROM ubuntu:16.04
+FROM python:2-slim-stretch
 
-ADD sources.list /etc/apt/
+LABEL Organization="CTFTraining" Author="blus <851579181@qq.com>"
+MAINTAINER blus@CTFTraining <851579181@qq.com>
 
-RUN apt update -y
-RUN apt-get install -y socat python
-COPY copperstudy2.py ./
-RUN chmod 777 copperstudy2.py
-EXPOSE 37777
-ENTRYPOINT socat TCP4-LISTEN:37777,tcpwrap=script,reuseaddr,fork EXEC:"/usr/bin/env python2 -u copperstudy2.py"&& /bin/bash
+RUN sed -i 's/deb.debian.org/mirrors.tuna.tsinghua.edu.cn/' /etc/apt/sources.list && \
+    sed -i '/security/d' /etc/apt/sources.list && \
+    apt-get update -y && \
+    apt-get install socat -y
+
+COPY copperstudy2.py /app/copperstudy2.py
+
+EXPOSE 10000
+
+ENTRYPOINT socat TCP4-LISTEN:10000,tcpwrap=script,reuseaddr,fork EXEC:"/usr/bin/env python2 -u /app/copperstudy2.py"
