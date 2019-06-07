@@ -1,0 +1,9 @@
+version: "2"
+services:
+
+  web:
+    # build: .
+    image: 851579181/qiangwangbei_2019_crypto_copperstudy
+    ports:
+      - "127.0.0.1:37777:37777"
+    restart: always
