@@ -3,8 +3,8 @@ version: "2"
 services:
 
   crypto:
-    build: .
-    image: ctftraining/qiangwangbei_2019_crypto_copperstudy
+    # build: .
+    image: ctftraining/qwb_2019_crypto_copperstudy
     environment:
       - FLAG=FLAG{9828f915d621b9a0a5666fc21e5ee84f}
     ports:
